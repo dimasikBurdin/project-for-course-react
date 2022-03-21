@@ -1,0 +1,45 @@
+.menu__body {
+    height: 100%;
+    padding-right: 10px;
+}
+
+.menu__accordion {
+    padding-top: 20px;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /* border-left: 10px solid rgb(207, 207, 207); */
+    padding-left: 10px;
+    
+}
+
+.list-menu {
+    border-left: 10px solid rgb(207, 207, 207);
+}
+
+.list-menu__item {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    background: rgb(93, 88, 114);
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.list-menu__item:hover {
+    background: rgb(172, 156, 235);
+}
+
+.list-menu__item::after {
+    content: "";
+    position: absolute;
+    /* top: 2px; */
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    background: url("icon-triagle.svg") center center no-repeat;
+    border-radius: 50%;
+    transform: translate(-100%, 0);    
+}
