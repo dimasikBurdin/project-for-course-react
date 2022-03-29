@@ -1,5 +1,4 @@
 import React from "react";
-import './menuButtons.css';
 
 export const MenuButtons:React.FC = React.memo(() => {
     return <div className="menu__header">
