@@ -3,22 +3,22 @@ import './App.css';
 import { LeftSideContainer } from './components/leftContainer/leftSideContainer';
 import { RightSide } from './components/rightContainer/rightSideContainer';
 import {Space} from 'antd';
+import { StyleType } from './StyleType';
 
 function App() {
-  const [dataStyle, setDataStyle] = useState({
+  let initData : StyleType = {
     backgroundColor:'black',
     color: 'white',
     fontSize: '16px',
     padding: '10px',
-    borderRadius: '0px',
-  })
-
-  
+    borderRadius: '10px',
+  }
+  const [dataStyle, setDataStyle] = useState(initData)
 
   return (
     <div className='main'>
-        <LeftSideContainer setStyles={setDataStyle}></LeftSideContainer>
-        <RightSide styles={dataStyle}></RightSide>
+        <LeftSideContainer setStyles={setDataStyle} styles={dataStyle} />
+        <RightSide styles={dataStyle} />
     </div>
   );
 }

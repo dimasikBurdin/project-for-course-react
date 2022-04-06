@@ -3,33 +3,43 @@ import React, { useEffect, useState } from "react";
 type TProps = {
     type: string,
     defaultValue: string,
-    nameProperty: string
-
+    nameProperty: string,
+    setCurrentValue: React.Dispatch<React.SetStateAction<{
+        nameProp: string;
+        valueProp: string;
+    }>>,
+    min?: string | number,
+    max?: string,
+    currentValue: string
 }
 
 export const ChangeInput:React.FC<TProps> = React.memo((props) => {
     const [leftPartValue, setLeft] = useState(props.defaultValue);
 
     useEffect(() => {
-        setLeft(props.defaultValue);
-    }, [props.type]);
+        let defaultValue = '';
+        if(!props.currentValue) {            
+            defaultValue = props.defaultValue            
+        } else {
+            defaultValue = props.currentValue
+        }
+        // isNaN(+currentChangeValue)
+        setLeft(defaultValue);
+    }, [props.nameProperty]);
 
     function onChangeInput(e : React.ChangeEvent<HTMLInputElement>) {
         setLeft(e.target.value);
-
-        let elementButton = document.querySelector('.preview_btn');
-        //@ts-ignore
-        let a = props.nameProperty;
-        
+        props.setCurrentValue({nameProp: props.nameProperty, valueProp: e.target.value})
     }
 
     return <div className="input-change-container">
         <input className="input-change-input" 
             type={props.type}
             value={leftPartValue}
-            min={0} 
-            max={100}
-            onChange={(x) => onChangeInput(x)}>
+            min={props.min} 
+            max={50}
+            onChange={(x) => onChangeInput(x)}
+            >
             
         </input>
         {leftPartValue}

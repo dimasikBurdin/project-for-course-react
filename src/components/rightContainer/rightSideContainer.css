@@ -3,6 +3,125 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px
+    gap: 20px;
+    height: 100vh;
+    
     /* background: rgba(255, 0, 0, 0.281); */
+}
+
+.preview_copy {
+    background: #000;
+}
+
+.preview__body_padding {
+    display: flex;
+    /* justify-content: start; */
+    align-items: flex-end;
+}
+
+.preview__text {    
+    word-wrap: break-word;
+    padding: 10px;
+    color: rgb(230, 227, 227);
+    overflow-y: auto;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.preview__link {
+    background: rgb(125, 123, 238);
+    border: 0;
+    text-align: center;
+    padding: 18px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+
+}
+
+/* .preview__btn {
+    background: rgb(125, 123, 238);
+    text-align: center;
+    padding: 18px;
+    transition: all 0.3s ease 0s;
+} */
+
+.preview__btn:hover {
+    background: #fff;
+    
+}
+
+.preview__btn:hover .preview__link {
+    color: #000;
+}
+
+.preview__link {
+    text-decoration: none;
+    color: white;
+}
+
+.preview {
+    max-width: 300px;
+}
+
+.preview__header {
+    background: rgb(57, 98, 175);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 200px 5px 5px;
+}
+
+.preview__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 200px;
+}
+
+.preview_btn {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.preview_btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.colors-preview {
+    background: rgb(216, 216, 216);
+}
+
+ul li.colors-preview__item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.colors-preview {
+    padding: 2px;
+}
+
+ul li.colors-preview__item:nth-child(1) {
+    background-color: rgb(190, 69, 69);
+}
+ul li.colors-preview__item:nth-child(2) {
+    background-color: rgb(170, 54, 206);
+}
+ul li.colors-preview__item:nth-child(3) {
+    background-color: rgb(167, 109, 62);
+}
+ul li.colors-preview__item:nth-child(4) {
+    background-color: rgb(224, 48, 142);
+}
+
+.colors-preview_code {
+    width: 100px;
+    position: relative;
+    top: -10px;
 }

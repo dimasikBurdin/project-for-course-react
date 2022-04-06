@@ -1,14 +1,8 @@
 import React from "react";
-import './previewContainer.css';
+import { StyleType } from "../../StyleType";
 
 type TProps = {
-    styles: {
-        backgroundColor: string;
-        color: string;
-        fontSize: string;
-        padding: string;
-        borderRadius: string;
-    }
+    styles: StyleType
 }
 
 export const PreviewContainer: React.FC<TProps> = React.memo((props) => {
