@@ -12,11 +12,16 @@ function App() {
     fontSize: '16px',
     padding: '10px',
     borderRadius: '10px',
+    width: 'auto',
+    height: 'auto',
+    // textAlign: 'center',
+    // verticalAlign: 'middle'
+    
   }
   const [dataStyle, setDataStyle] = useState(initData)
 
   return (
-    <div className='main'>
+    <div className='main' >
         <LeftSideContainer setStyles={setDataStyle} styles={dataStyle} />
         <RightSide styles={dataStyle} />
     </div>

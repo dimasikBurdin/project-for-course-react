@@ -34,7 +34,12 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
 
     function onClickOtherButton(e : React.MouseEvent<HTMLLIElement, MouseEvent>) {
         let eventTarget = e.target as HTMLElement
-        setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)
+        if(eventTarget.id === 'width' || eventTarget.id === 'height') {
+            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range" min={20} max="250"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)    
+        } else {
+            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)
+        }
+        
     }
        
     useEffect(() => {
@@ -57,7 +62,12 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
             case 'radius':
                 props.setStyles({...props.styles, borderRadius: currentChangeValue.valueProp + 'px'})
                 break
-                
+            case 'width':
+                props.setStyles({...props.styles, width: currentChangeValue.valueProp + 'px'})
+                break
+            case 'height':
+                props.setStyles({...props.styles, height: currentChangeValue.valueProp + 'px'})
+                break                
         }
 
         return () => setCurrentChangeValue({nameProp:'', valueProp: ''})
@@ -75,6 +85,8 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
                 <li className="list-menu__item" id="radius" onClick={onClickOtherButton}>Border radius</li>
                 <li className="list-menu__item" onClick={onClickOtherButton}>Box Shadow</li>
                 <li className="list-menu__item" onClick={onClickOtherButton}>Text Shadow</li>
+                <li className="list-menu__item" id="width" onClick={onClickOtherButton}>Width</li>
+                <li className="list-menu__item" id="height" onClick={onClickOtherButton}>Height</li>
             </ul>
         </div>
         {changeInput}
