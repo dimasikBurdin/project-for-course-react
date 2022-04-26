@@ -1,12 +1,22 @@
 .menu {
+    transition: all 0.2s ease 0s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 350px;
-    height: 100vh;
     background: rgb(58, 55, 71);
+}
+
+.menu.hide {
+    transform: translateX(-100%);
 }
 
 .menu__body {
     height: 100%;
     padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu__accordion {

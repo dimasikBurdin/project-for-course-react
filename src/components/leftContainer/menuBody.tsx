@@ -15,17 +15,7 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
     const [activeButton, setActiveButton] = useState(<></>)
 
     function onClickColorButton(e : React.MouseEvent<HTMLLIElement, MouseEvent>) {
-        let eventTarget = e.target as HTMLElement
-        
-        // //@ts-ignore
-        // let activeElements = document.querySelectorAll('.active');
-        // //@ts-ignore
-        // for(let e of activeElements) {
-        //     e.classList.remove('active');
-        // }
-        // //@ts-ignore
-        // let elem = document.getElementById(e.target.id);
-        // elem?.classList.add('active');
+        let eventTarget = e.target as HTMLElement;
         console.log(eventTarget.id)
         
 
@@ -45,29 +35,29 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
     useEffect(() => {
         switch(currentChangeValue.nameProp) {
             case 'color':
-                props.setStyles({...props.styles, color:currentChangeValue.valueProp})
-                break
+                props.setStyles({...props.styles, color:currentChangeValue.valueProp});
+                break;
             case 'background':
-                props.setStyles({...props.styles, backgroundColor:currentChangeValue.valueProp})
-                break
+                props.setStyles({...props.styles, backgroundColor:currentChangeValue.valueProp});
+                break;
             case 'fontSize':
-                props.setStyles({...props.styles, fontSize: currentChangeValue.valueProp + 'px'})
-                break
+                props.setStyles({...props.styles, fontSize: currentChangeValue.valueProp + 'px'});
+                break;
             case 'fontWeight':
                 // props.setStyles({...props.styles, fontWeight : currentChangeValue.valueProp + 'px'})
-                break
+                break;
             case 'padding':
-                props.setStyles({...props.styles, padding: currentChangeValue.valueProp + 'px'})
-                break
+                props.setStyles({...props.styles, padding: currentChangeValue.valueProp + 'px'});
+                break;
             case 'radius':
-                props.setStyles({...props.styles, borderRadius: currentChangeValue.valueProp + 'px'})
-                break
+                props.setStyles({...props.styles, borderRadius: currentChangeValue.valueProp + 'px'});
+                break;
             case 'width':
-                props.setStyles({...props.styles, width: currentChangeValue.valueProp + 'px'})
-                break
+                props.setStyles({...props.styles, width: currentChangeValue.valueProp + 'px'});
+                break;
             case 'height':
-                props.setStyles({...props.styles, height: currentChangeValue.valueProp + 'px'})
-                break                
+                props.setStyles({...props.styles, height: currentChangeValue.valueProp + 'px'});
+                break;              
         }
 
         return () => setCurrentChangeValue({nameProp:'', valueProp: ''})
@@ -88,7 +78,9 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
                 <li className="list-menu__item" id="width" onClick={onClickOtherButton}>Width</li>
                 <li className="list-menu__item" id="height" onClick={onClickOtherButton}>Height</li>
             </ul>
+            {changeInput}
         </div>
-        {changeInput}
+        
+        {props.children}
     </div>
 })
