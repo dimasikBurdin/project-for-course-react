@@ -23,10 +23,10 @@ function App() {
   const [currentElement, setCurrentElement] = useState(init);
 
   useEffect(() => {
-    if(!currentElement.className) return
-    console.log('change current')
+    if(!currentElement.className) return;
+    console.log('change current');
     let curStyles = document.defaultView?.getComputedStyle(currentElement) as CSSStyleDeclaration;
-    currentElement.style.border = '2px solid red'
+    currentElement.style.outline = '4px solid rgba(0, 0, 255, 0.5)';
     setDataStyle({
       backgroundColor: curStyles.backgroundColor,
       borderRadius: curStyles.borderRadius,
@@ -34,10 +34,10 @@ function App() {
       fontSize: curStyles.fontSize,
       height: curStyles.height,
       padding: curStyles.padding,
-      width: curStyles.width
+      width: curStyles.width,
     });
 
-    return () => {currentElement.style.border = 'none'};
+    return () => {currentElement.style.outline = 'none'};
   }, [currentElement]);
 
   useEffect(() => {
