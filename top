@@ -1,0 +1,72 @@
+[33mcommit ab106ce748d21b1bf03fcf6b92ae4237bbfc4459[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Wed Apr 27 20:26:37 2022 +0500
+
+    добавлена кнопка reset styles, добавлены тестовые картинки
+
+[33mcommit 1fcee8493a35b0cb46e936de583b5d0017a0fa80[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Wed Apr 27 01:06:57 2022 +0500
+
+    человеческий вид + тестовые кнопки + мелкие фиксы
+
+[33mcommit d3ed294b08e20ba3268d1dc5db2a94e7078325d8[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Tue Apr 26 15:52:47 2022 +0500
+
+    добавлена возможность изменять любой элемент, на который был клик
+
+[33mcommit 935a0e547090d5b11b935d0cd2133f94a9f614a7[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Apr 6 17:31:11 2022 +0500
+
+    добавлены кнопки изменения высоты и ширины контейнера
+
+[33mcommit 71ce5fe96ed011635fef3368666df227a71bb38a[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Apr 6 17:12:08 2022 +0500
+
+    добавлено изменение почти всех свойств, кроме теней и font weight, добавлена реальная информация о свойствах в правом контейнере
+
+[33mcommit 1b6ca10ab1492a076443b4ff90232f9acdf4a26d[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Tue Mar 29 17:44:29 2022 +0500
+
+    добавлены стейты, немного логики
+
+[33mcommit 39ed7a90b5438d5081e793b00897cb5ecc84ae6d[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Mon Mar 21 13:28:22 2022 +0500
+
+    добавил верстку
+
+[33mcommit fba22a4b25592809778d690d52d3eabdf952243b[m
+Merge: db553a7 899a07e
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Mar 9 17:36:59 2022 +0500
+
+    Merge branch 'master' of https://github.com/dimasikBurdin/project-for-course-react
+
+[33mcommit db553a76c6b025ac7cd4ab459086c1f4ca85528d[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Mar 9 17:36:30 2022 +0500
+
+    init
+
+[33mcommit 899a07e7c5acbcad001498def151196f17b9ca0e[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Mar 9 16:15:55 2022 +0500
+
+    Update README.md
+
+[33mcommit 4997f269838fd266deb0831507e7438aaae64205[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Mar 9 16:14:18 2022 +0500
+
+    init
+
+[33mcommit 4468649502091d6e52a960df8cc861e55cce9101[m
+Author: dimasikBurdin <81648493+dimasikBurdin@users.noreply.github.com>
+Date:   Wed Mar 9 16:11:34 2022 +0500
+
+    Initialize project using Create React App

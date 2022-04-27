@@ -43,7 +43,7 @@ export const LeftSideContainer: React.FC<TProps> = React.memo((props) => {
                     <div className="preview__header">CSS</div>
                     <div className="preview__body preview__body_padding">
                         <div className="preview__text">
-                            {JSON.stringify(props.styles)}                    
+                            {"" + JSON.stringify(props.styles) + "\n"}                    
                         </div>
                     </div>
                     <div className="preview__btn" onClick={(e) => onPreviewBtnClick(e)}>

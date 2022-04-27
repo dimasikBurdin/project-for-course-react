@@ -58,6 +58,12 @@ export const RightSide: React.FC<TProps> = React.memo((props) => {
                 <li><a href="#" className="li2">Link</a></li>
                 <li><a href="#" className="li3">Link</a></li>
             </ul>
+            <div className="image-title">img</div>
+            <ul className="images">
+                <li><img src="img/python.jpg" className="image1"/></li>
+                <li><img src="img/bykov.jpg" className="image2"/></li>
+                <li><img src="img/np.jpg" className="image3"/></li>
+            </ul>
         </div>
     );
 });

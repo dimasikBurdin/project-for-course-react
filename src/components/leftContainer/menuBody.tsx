@@ -25,7 +25,7 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
     function onClickOtherButton(e : React.MouseEvent<HTMLLIElement, MouseEvent>) {
         let eventTarget = e.target as HTMLElement
         if(eventTarget.id === 'width' || eventTarget.id === 'height') {
-            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range" min={20} max="250"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)    
+            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range" min={20} max="500"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)    
         } else {
             setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)
         }
