@@ -5,6 +5,8 @@ import { RightSide } from './components/rightContainer/rightSideContainer';
 import {Space} from 'antd';
 import { StyleType } from './StyleType';
 
+let isCalled = false;
+
 function App() {
   let initData : StyleType = {
     backgroundColor:'black',
@@ -23,10 +25,10 @@ function App() {
   const [currentElement, setCurrentElement] = useState(init);
 
   useEffect(() => {
-    if(!currentElement.className) return
-    console.log('change current')
+    if(!currentElement.className) return;
+    console.log('change current');
     let curStyles = document.defaultView?.getComputedStyle(currentElement) as CSSStyleDeclaration;
-    currentElement.style.border = '2px solid red'
+    currentElement.style.outline = '4px solid rgba(0, 0, 255, 0.5)';
     setDataStyle({
       backgroundColor: curStyles.backgroundColor,
       borderRadius: curStyles.borderRadius,
@@ -34,10 +36,10 @@ function App() {
       fontSize: curStyles.fontSize,
       height: curStyles.height,
       padding: curStyles.padding,
-      width: curStyles.width
+      width: curStyles.width,
     });
 
-    return () => {currentElement.style.border = 'none'};
+    return () => {currentElement.style.outline = 'none'};
   }, [currentElement]);
 
   useEffect(() => {
@@ -45,7 +47,18 @@ function App() {
         //@ts-ignore
         currentElement.style[e] = dataStyle[e]
       }
-  }, [dataStyle])
+  }, [dataStyle]);
+
+  // if (!isCalled) {
+  //   // @ts-ignore
+  //   setTimeout(() => {
+  //     setResetStyles(setDataStyle, initData);
+  //     console.log('внутри if');
+  //   }, 5000);
+  // }
+  // isCalled = true;
+
+  setResetStyles(setDataStyle, initData);
 
   return (
     <div className='main' >
@@ -54,5 +67,18 @@ function App() {
     </div>
   );
 }
+
+// @ts-ignore
+function setResetStyles(setDataStyle, initData) {
+  console.log(document.querySelector('#reset'));
+  document.querySelector('#reset')?.addEventListener('click', (e) => {
+    console.log('reset btn clicked');
+    console.log(document.querySelector('#reset'));
+    // @ts-ignore
+    setDataStyle(initData);
+    console.log('set')
+  });
+}
+
 
 export default App;

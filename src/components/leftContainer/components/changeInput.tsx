@@ -37,7 +37,7 @@ export const ChangeInput:React.FC<TProps> = React.memo((props) => {
             type={props.type}
             value={leftPartValue}
             min={props.min || 0} 
-            max={props.max || 50}
+            max={props.max || 100}
             onChange={(x) => onChangeInput(x)}
             >
             

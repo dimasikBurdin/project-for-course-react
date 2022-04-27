@@ -25,7 +25,7 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
     function onClickOtherButton(e : React.MouseEvent<HTMLLIElement, MouseEvent>) {
         let eventTarget = e.target as HTMLElement
         if(eventTarget.id === 'width' || eventTarget.id === 'height') {
-            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range" min={20} max="250"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)    
+            setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range" min={20} max="500"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)    
         } else {
             setChangeInput(<ChangeInput nameProperty={eventTarget.id} type="range"  defaultValue="50" currentValue={currentChangeValue.valueProp} setCurrentValue={setCurrentChangeValue} />)
         }
@@ -69,12 +69,12 @@ export const MenuBody:React.FC<TProps> = React.memo((props) => {
                 <li className="list-menu__item" id="background" onClick={x => onClickColorButton(x)} >Background color</li>
                 <li className="list-menu__item" id="color" onClick={onClickColorButton}>Color</li>
                 <li className="list-menu__item" id="fontSize" onClick={onClickOtherButton}>Font size</li>
-                <li className="list-menu__item" id="fontWeight" onClick={onClickOtherButton}>Font weight</li>
+                {/* <li className="list-menu__item" id="fontWeight" onClick={onClickOtherButton}>Font weight</li> */}
                 <li className="list-menu__item" id="padding" onClick={onClickOtherButton}>Horizontal padding</li>
                 <li className="list-menu__item" id="padding" onClick={onClickOtherButton}>Vertical padding</li>
                 <li className="list-menu__item" id="radius" onClick={onClickOtherButton}>Border radius</li>
-                <li className="list-menu__item" onClick={onClickOtherButton}>Box Shadow</li>
-                <li className="list-menu__item" onClick={onClickOtherButton}>Text Shadow</li>
+                {/* <li className="list-menu__item" onClick={onClickOtherButton}>Box Shadow</li> */}
+                {/* <li className="list-menu__item" onClick={onClickOtherButton}>Text Shadow</li> */}
                 <li className="list-menu__item" id="width" onClick={onClickOtherButton}>Width</li>
                 <li className="list-menu__item" id="height" onClick={onClickOtherButton}>Height</li>
             </ul>
