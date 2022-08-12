@@ -1,0 +1,32 @@
+.custom {
+    display: flex;
+}
+
+.left-custom {
+    flex: 0 1 50%;
+    /* background: rgba(250, 116, 116, 0.589); */
+    padding: 20px;
+}
+
+.right-custom {
+    flex: 0 1 50%;
+    /* background: rgba(116, 250, 123, 0.589); */
+    text-align: center;
+}
+
+.custom-component {
+    /* overflow: hidden; */
+}
+
+h3 {
+    margin-bottom: 30px;
+    /* background: #000; */
+}
+
+.width,
+.height,
+.borderRadius,
+.text,
+select {
+    margin-bottom: 10px;
+}

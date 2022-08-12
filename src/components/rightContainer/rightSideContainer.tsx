@@ -1,8 +1,9 @@
 import React from "react";
 import { PreviewContainer } from "./previewContainer";
 import { CssInfoPreview } from "./cssInformationPreview";
+import { CreateBtn } from "./CreateBtn";
 import './rightSideContainer.css';
-import { StyleType } from "../../StyleType"; 
+import { StyleType } from "../../StyleType";
 
 type TProps = {
     styles: StyleType,
@@ -16,7 +17,7 @@ export const RightSide: React.FC<TProps> = React.memo((props) => {
     // }
 
     function onClickBody(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-        let element = e.target as HTMLElement;        
+        let element = e.target as HTMLElement;
         props.setCurrent(element);
         // console.log(element);
     }
@@ -32,10 +33,12 @@ export const RightSide: React.FC<TProps> = React.memo((props) => {
     });
 
     function onClickIframe(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-        let element = e.target as HTMLElement;        
+        let element = e.target as HTMLElement;
         props.setCurrent(element);
         console.log(element);
     }
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => e.preventDefault();
 
     return (
         <div className="body-main" onClick={e => onClickBody(e)}>
@@ -54,16 +57,17 @@ export const RightSide: React.FC<TProps> = React.memo((props) => {
             </ul>
             <div className="li-title">link</div>
             <ul className="lis">
-                <li><a href="#" className="li1">Link</a></li>
-                <li><a href="#" className="li2">Link</a></li>
-                <li><a href="#" className="li3">Link</a></li>
+                <li><a href="" className="li1" onClick={(e) => handleLinkClick(e)}>Link</a></li>
+                <li><a href="" className="li2" onClick={(e) => handleLinkClick(e)}>Link</a></li>
+                <li><a href="" className="li3" onClick={(e) => handleLinkClick(e)}>Link</a></li>
             </ul>
-            <div className="image-title">img</div>
+            {/* <div className="image-title">img</div>
             <ul className="images">
-                <li><img src="img/python.jpg" className="image1"/></li>
-                <li><img src="img/bykov.jpg" className="image2"/></li>
-                <li><img src="img/np.jpg" className="image3"/></li>
-            </ul>
+                <li><img alt="test img" src="img/python.jpg" className="image1" /></li>
+                <li><img alt="test img" src="img/np.jpg" className="image2" /></li>
+                <li><img alt="test img" src="img/np.jpg" className="image3" /></li>
+            </ul> */}
+            <CreateBtn />
         </div>
     );
 });
